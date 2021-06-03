@@ -2,7 +2,7 @@
 
 ROCK=$(cd $(dirname $0)/.. && pwd)
 
-grep "Rocktest setup" ~/.bashrc 2> /dev/null || {
+grep -q "Rocktest setup" ~/.bashrc || {
   echo "# Rocktest setup"
   echo export ROCK=\"$ROCK\"
   echo export PATH=\$PATH:$ROCK/sh
